@@ -1,0 +1,5 @@
+mode: set
+learngowithtests/concurrency/websitechecker.go:7.70,10.27 2 1
+learngowithtests/concurrency/websitechecker.go:10.27,11.13 1 1
+learngowithtests/concurrency/websitechecker.go:11.13,13.4 1 1
+learngowithtests/concurrency/websitechecker.go:15.2,16.16 2 1

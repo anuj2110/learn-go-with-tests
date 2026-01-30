@@ -1,0 +1,29 @@
+package reflections
+
+import "reflect"
+
+func getValue(x interface{}) reflect.Value {
+	val := reflect.ValueOf(x)
+	if val.Kind() == reflect.Ptr {
+		val = val.Elem()
+	}
+	return val
+}
+
+func walk(x interface{}, fn func(string)) {
+	val := getValue(x)
+
+	if val.Kind() == reflect.Ptr {
+		val = val.Elem()
+	}
+
+	for i := 0; i < val.NumField(); i++ {
+		field := val.Field(i)
+		switch field.Kind() {
+		case reflect.String:
+			fn(field.String())
+		case reflect.Struct:
+			walk(field.Interface(), fn)
+		}
+	}
+}

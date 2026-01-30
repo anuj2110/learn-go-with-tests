@@ -1,0 +1,5 @@
+mode: set
+learngowithtests/reflections/walk.go:5.43,8.38 2 1
+learngowithtests/reflections/walk.go:8.38,10.23 2 1
+learngowithtests/reflections/walk.go:11.23,12.22 1 1
+learngowithtests/reflections/walk.go:13.23,14.31 1 1
